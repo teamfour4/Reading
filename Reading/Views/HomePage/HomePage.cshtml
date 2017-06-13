@@ -1,0 +1,230 @@
+﻿
+@{
+    ViewBag.Title = "HomePage";
+}
+<!doctype html>
+<html lang="en">
+<head>
+    @*<meta charset="utf-8">
+        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            height: 500px;
+            width: 1170px;
+            margin: 60px auto;
+            overflow: hidden;
+            position: relative;
+            margin: 100px auto;
+            margin-left: 10px;
+        }
+
+            .wrap ul {
+                position: absolute;
+            }
+
+
+            .wrap ol {
+                position: absolute;
+                right: 5px;
+                bottom: 10px;
+            }
+
+                .wrap ol li {
+                    height: 20px;
+                    width: 20px;
+                    background: #ccc;
+                    border: solid 1px #666;
+                    margin-left: 5px;
+                    color: #000;
+                    float: left;
+                    line-height: center;
+                    text-align: center;
+                    cursor: pointer;
+                }
+
+                .wrap ol .on {
+                    background: #E97305;
+                    color: #fff;
+                }
+        #list {
+            margin-right:500px;
+        }
+
+        #myTab {
+            /*margin-left: 900px;*/
+            position:absolute;
+            right:0;top:0;
+        }
+
+        #myTabContent {
+            /*margin-left: 900px;*/
+                margin-top:60px;
+                position:absolute;right:0;top:0;
+        }
+       
+        .div-inline {
+           display:inline;
+        }
+        #fong {
+        display: inline; 
+        margin-left:120px;
+        }
+        #gont {
+            float:right;
+        }
+        #ong {
+            margin-left:230px;
+        }
+        #gont {
+          margin-top:auto;
+        }
+    
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var wrap = document.getElementById('wrap'),
+            pic = document.getElementById('pic').getElementsByTagName("li"),
+            list = document.getElementById('list').getElementsByTagName('li'),
+            index = 0,
+            timer = null;
+
+            // 定义并调用自动播放函数
+            timer = setInterval(autoPlay, 2000);
+
+            // 鼠标划过整个容器时停止自动播放
+            wrap.onmouseover = function () {
+                clearInterval(timer);
+            }
+
+            // 鼠标离开整个容器时继续播放至下一张
+            wrap.onmouseout = function () {
+                timer = setInterval(autoPlay, 2000);
+            }
+            // 遍历所有数字导航实现划过切换至对应的图片
+            for (var i = 0; i < list.length; i++) {
+                list[i].onmouseover = function () {
+                    clearInterval(timer);
+                    index = this.innerText - 1;
+                    changePic(index);
+                };
+            };
+
+            function autoPlay() {
+                if (++index >= pic.length) index = 0;
+                changePic(index);
+            }
+
+            // 定义图片切换函数
+            function changePic(curIndex) {
+                for (var i = 0; i < pic.length; ++i) {
+                    pic[i].style.display = "none";
+                    list[i].className = "";
+                }
+                pic[curIndex].style.display = "block";
+                list[curIndex].className = "on";
+            }
+
+        };
+
+    </script>
+</head>
+
+<body>
+    <br /><br /><br />
+
+    <div class="wrap" id='wrap'>
+        <ul id="pic">
+            <li><a href=""><img src="~/fonts/timg(1).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(2).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(4).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(6).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(3).png" alt=""></a></li>
+        </ul>
+        <ol id="list">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+
+        <table border="1"style="height:500px;width:350px;border-color:#000;" id="myTab" >
+            <tr style="height:500px;width:300px;">
+                <td style="height:500px;width:300px;">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li><a href="#home" data-toggle="tab" style="font-size:25px;">畅销榜</a></li>
+                        <li><a href="#ios" data-toggle="tab" style="font-size:25px">新书榜</a></li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade" id="home">
+                            <p> 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p> 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p> 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p> 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p> 是一个由苹果公司开发和发布的手机操作系统</p>
+
+                        </div>
+                        <div class="tab-pane fade" id="ios">
+                            <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
+                            <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
+                            
+                        </div>
+                    </div>
+
+                </td>
+                
+            </tr>
+        </table>
+        </div>
+    <label style="font-size:30px;">编辑推荐</label>
+ <div>
+     <hr/>
+     <div class="div-inline">
+         <img src="~/fonts/3.png">
+         <label id="dong"><b>书名</b></label>
+         <label>作者</label>
+         <label>简介：一本书的简要描述</label>
+     </div>
+
+     @*<div class="div-inline" id="fong">
+         <img src="~/fonts/3.png">
+         <label><b>书名</b></label><br />
+         <label>作者</label><br />
+         <label>简介：一本书的简要描述</label>
+     </div>
+
+     <div class="div-inline" id="ong">
+         <img src="~/fonts/3.png">
+         <label><b>书名</b></label><br />
+         <label>作者</label><br />
+         <label>简介：一本书的简要描述</label>
+     </div>
+
+     <div class="div-inline" id="gont">
+         <img src="~/fonts/3.png">
+         <label><b>书名</b></label><br />
+         <label>作者</label><br />
+         <label>简介：一本书的简要描述</label>
+     </div>*@
+
+    
+
+    
+    
+ </div>
+   
+
+       
+</body>
+</html>

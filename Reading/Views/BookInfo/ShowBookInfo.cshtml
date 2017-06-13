@@ -1,0 +1,110 @@
+﻿@model Reading.Models.Book
+@{
+    ViewBag.Title = "ShowBookInfo";
+}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style>
+        ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 500px;
+            margin: 100px auto;
+        }
+
+            .box .img {
+                float: left;
+            }
+
+                .box .img img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+            .box .list {
+                float: left;
+                width: 200px;
+                margin-left: 20px;
+                display: inline;
+            }
+
+                .box .list li {
+                    line-height: 50px;
+                    font-size: 14px;
+                }
+
+        .list li span {
+            font-weight: bold;
+        }
+        #1 {
+            margin-right:100px;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="box" id="1">
+        <div>
+            <div class="img">
+                <img src="~/fonts/cover.png" alt="" style="width:130px; height:180px" />
+            </div>
+            <ul class="list">
+                <li></li>
+                <li></li>
+                <li><span>书名：</span>花开不记年</li>
+                <li>
+                    <span>作者:</span>番茄大大
+                    <br />
+                    <br />
+                    <form id="form3" name="form3" method="post" action="">
+                        <button type="submit" class="btn btn-success" style="background-repeat:#808080;height:28px;width:50px;" onclick="window.open('')">阅读</button>
+                        <button type="submit" class="btn btn-success" style="background-repeat:#808080;height:28px;width:50px">收藏</button>
+                    </form>
+                </li>
+            </ul>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+
+        <div id="2"style="width:900px;height:900px">
+            <p style="font-size:20px;">图书信息</p>
+            <HR  color=#987cb9 SIZE=0 />
+            <p>“你爱过我吗？”冷不丁的一句话在身后响起，苏清扬身形一顿，停止了步伐。
+“苏清扬，你爱过我吗？”陆云起慢慢靠近，这句话他闷在心里五年，多少个午夜梦回都被这句话逼仄得透不过气。他有时候觉得自己真是可笑又可怜。
+五年了，她变了。他也变了。
+良久，她都只是低着头不说话。
+陆云起看着她清秀的侧颜，突然嗤笑一声，“我知道了。”说完，大踏步离开，转身的一瞬心像破了个大洞。
+等到脚步声渐渐远去，苏清扬像浑身给人卸了力般瘫坐在地，眼泪终于大颗大颗砸在地上。
+年少相遇，后来流离。向来缘浅，奈何情深。</p>
+
+        </div>
+    </div>
+</body>
+</html>

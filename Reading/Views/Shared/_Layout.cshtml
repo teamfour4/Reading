@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    <style>
+        .well {
+            width: 1000px;
+            height: 40px;
+        }
+
+        .a {
+            color: #000000;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+            .a:hover {
+                background-color: #b4d8f7;
+                height: 50px;
+                width: 50px;
+            }
+    </style>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div>
+
+                <div>
+                   
+                        <a href="" style="float:left">将本站设为首页</a><a style="float:left">|</a><a href="" style="float:left">收藏本站</a><a href="/Register/Register" style="float:right">注册</a><a style="float:right">|</a><a href="/Login/Login" style="float:right">登录</a>
+                    
+                </div> <hr />
+                <hr />
+            </div>
+            <div>
+                <div>
+                    <img src="~/fonts/1.png" height="40px" ;width="40px" />&nbsp;&nbsp;
+                    <spans style="font-size:25px;"><b>多多阅读</b></spans> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <input class="well" type="text" style="border-radius:5px" placeholder="请输入要搜索的书籍" />
+                    <input type="submit" style="border:none;border-radius:5px;height:40px;width:70px;background:#d0d0d0" />
+
+
+
+                    <a style="float:right;font-size:23px;" href="">我的书架</a> <img style="float:right;" src="~/fonts/2.png" />
+                </div>
+            </div>
+
+            <div>
+                <div  style="height:50px;width:1158px;background: #d0d0d0; text-align:center;line-height:50px">
+
+                    <a href="/HomePage/HomePage" class="a">首页</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">玄幻.奇幻</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">武侠.仙侠</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">都市.言情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">历史.军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">游戏.竞技</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">科幻.灵异</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">个人中心</a>
+
+
+                </div>
+            </div>
+            <div>
+                <div class="navbar-inverse">
+                    @*<ul class="nav navbar-nav">
+                            @{
+                                Html.RenderAction("SubMenu", "Menu");
+                            }
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/bundles/jquery"></script>*@
+
+    @*@RenderSection("scripts", required: false)*@
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            @* <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        </footer>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
+
+
+</body>
+
+
+</html>
