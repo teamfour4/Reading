@@ -9,7 +9,7 @@ namespace Reading.Controllers
     public class RegisterController : Controller
     {
         // GET: Member
-        public ActionResult Enroll()
+        public ActionResult Register()
         {
             return View();
         }

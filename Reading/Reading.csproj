@@ -130,6 +130,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery-1.9.0.min.js" />
+    <Content Include="Content\login.js" />
+    <Content Include="Content\login2.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\1.png" />
     <Content Include="fonts\2.png" />
