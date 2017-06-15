@@ -186,6 +186,7 @@
     <Content Include="Views\HomePage\HomePage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Personal\Personal.cshtml" />
+    <Content Include="Views\Register\modUserPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
