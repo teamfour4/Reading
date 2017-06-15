@@ -43,11 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>\\psf\Home\Desktop\tao\EntityFramework.dll</HintPath>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>\\psf\Home\Desktop\Reading\Reading\Reading\bin\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\pangyuan\Desktop\tao\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>\\psf\Home\Desktop\tao\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\..\Users\pangyuan\Desktop\tao\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -82,9 +86,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -129,6 +130,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jquery-1.9.0.min.js" />
+    <Content Include="Content\login.js" />
+    <Content Include="Content\login2.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\1.png" />
     <Content Include="fonts\2.png" />
@@ -148,11 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BookClassifyController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookInfoController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PersonalController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,12 +185,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Views\HomePage\HomePage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Fakes Include="Fakes\Antlr3.Runtime.fakes" />
-    <Fakes Include="Fakes\EntityFramework.fakes" />
-    <Fakes Include="Fakes\EntityFramework.SqlServer.fakes" />
-    <Content Include="Views\BookClassify\FantasyBook.cshtml" />
-    <Content Include="Views\BookClassify\EmpriseBook.cshtml" />
-    <Content Include="Views\BookClassify\MetropolisBook.cshtml" />
+    <Content Include="Views\Personal\Personal.cshtml" />
+    <Content Include="Views\Register\modUserPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

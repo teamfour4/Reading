@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Personal";
+}
+
+<h2>ModifyPwd</h2>
+<style>
+    #ee {
+        width: 1px;
+        height: 900px;
+        background-color: #808080;
+        margin-left: -200px;
+        margin-top: -132px;
+    }
+
+    .div-inline {
+        display: inline;
+        position: absolute;
+        margin-top: -110px;
+    }
+
+    #hhh {
+        margin-left: -330px;
+        position: absolute;
+        margin-top: 37px;
+    }
+
+    .col-md-8 {
+        position: absolute;
+        margin-top: -850px;
+    }
+
+    #ww {
+        margin-left: -122px;
+        font-size: 20px;
+    }
+    #aa {
+   margin-left: -162px;
+    }
+    #dd {
+        width:80px;
+        height:30px;
+        border-radius:5px;
+        border:none;
+        background-color:#71d9fb;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    <div>
+        <div  style="margin:364px;margin-top:154px">
+            <a href="" style="font-size:20px;" id="hhh">我的书架</a><br /><br /><br />
+            <a href="/Register/modUserPassword" style="font-size:20px;" id="hhh">修改密码</a>
+            <hr id="ee" />
+            <div class="col-md-8">
+                <div id="ww">
+                    <label><b>类别</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><b>书名</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><b>作者</b></label>
+                </div>
+                <br /><br /><br />
+                <div id="aa">
+                    <form action="" method="get">
+                        <input name="" type="checkbox" style="width:20px;height:20px;margin-left:-34px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <lable>全选</lable>
+                    </form>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="dd">删除</button>&nbsp;&nbsp;&nbsp;
+                    <label>每页10条，共  条记录</label>
+                    <a href="" style="color:#000000;margin-left:342px;">上一页</a>
+                    <a href="" style="color:#000000;margin-left:25px; ">下一页</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+}
