@@ -156,6 +156,7 @@
     <Compile Include="Controllers\BookInfoController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PersonalController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,7 +185,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Views\HomePage\HomePage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Register\modUserPassword.cshtml" />
+    <Content Include="Views\Personal\Personal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
