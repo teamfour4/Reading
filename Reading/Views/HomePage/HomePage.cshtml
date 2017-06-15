@@ -1,14 +1,14 @@
 ﻿
 @{
-    ViewBag.Title = "HomePage";
+//ViewBag.Title = "HomePage";
 }
 <!doctype html>
 <html lang="en">
 <head>
-    @*<meta charset="utf-8">
-        <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+        @*<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">*@
         <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>*@
+        <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -54,63 +54,74 @@
                     background: #E97305;
                     color: #fff;
                 }
-
         #list {
-            margin-right: 500px;
+            margin-right:500px;
         }
 
         #myTab {
             /*margin-left: 900px;*/
-            position: absolute;
-            right: 0;
-            top: 0;
+            position:absolute;
+            right:24px;top:0;
+           height:500px;
+           width:352px;
+           border-color:#000;
+           border-style:solid;
+           border-width:1px;
+           border-color:#ccc;
+           background-color:rgba(237, 236, 236, 0.52);
         }
 
         #myTabContent {
             /*margin-left: 900px;*/
-            margin-top: 60px;
-            position: absolute;
-            right: 0;
-            top: 0;
+                margin-top:60px;
+                position:absolute;right:179px;top:0;
         }
-
+       
         .div-inline {
-            display: inline;
+           display:inline;
         }
-
         #fong {
-            display: inline;
-            margin-left: 120px;
+        display: inline; 
+        margin-left:120px;
         }
-
         #gont {
             /*float:right;*/
-            margin-left: 120px;
+            margin-left:120px;
         }
-
         #ong {
-            margin-left: 100px;
+            margin-left:100px;
         }
-
         #dont {
-            position: absolute;
-            margin-top: -2px;
-            font-size: 20px;
+            position:absolute;
+          margin-top:-2px;
+          font-size:20px;
         }
-
         #hh {
-            position: absolute;
-            margin-top: 140px;
-            margin-left: -40px;
+            position:absolute;
+            margin-top:140px;
+         margin-left:-40px;
         }
-
         #fong {
-            margin-left: 110px;
+            margin-left:110px;
+        }
+        #dd {
+        font-size:30px;
+        margin-top:-50px;
+        }
+        #a.hover {
+            color:#E97305;
+        }
+        .tab-pane {
+            position:absolute;
+            width:300px;
+            margin-left:-144px;
         }
 
-        #dd {
-            font-size: 30px;
-            margin-top: -50px;
+        #a {
+          color:#a76222;
+          font-size:20px;
+          
+   
         }
     </style>
     <script type="text/javascript">
@@ -160,9 +171,6 @@
         };
 
     </script>
-    <script src="~/Content/jquery-1.9.0.min.js"></script>
-    <script src="~/Content/login.js"></script>
-    <link href="~/Content/login2.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -172,9 +180,9 @@
         <ul id="pic">
             <li><a href=""><img src="~/fonts/timg(1).png" alt=""></a></li>
             <li><a href=""><img src="~/fonts/timg(2).png" alt=""></a></li>
-            @*<li><a href=""><img src="~/fonts/timg(4).png" alt=""></a></li>
-                <li><a href=""><img src="~/fonts/timg(6).png" alt=""></a></li>
-                <li><a href=""><img src="~/fonts/timg(3).png" alt=""></a></li>*@
+            <li><a href=""><img src="~/fonts/timg(4).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(6).png" alt=""></a></li>
+            <li><a href=""><img src="~/fonts/timg(3).png" alt=""></a></li>
         </ul>
         <ol id="list">
             <li class="on">1</li>
@@ -184,78 +192,13 @@
             <li>5</li>
         </ol>
 
-        @*<table border="1" style="height:500px;width:350px;border-color:#000;" id="myTab">
-                <tr style="height:500px;width:300px;">
-                    <td style="height:500px;width:300px;">
-                        <ul id="myTab" class="nav nav-tabs">
-                            <li><a href="#home" data-toggle="tab" style="font-size:25px;">畅销榜</a></li>
-                            <li><a href="#ios" data-toggle="tab" style="font-size:25px">新书榜</a></li>
-                        </ul>
-                        <div id="myTabContent" class="tab-content">
-                            <div class="tab-pane " id="home">
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-
-                            </div>
-                            <div class="tab-pane " id="ios">
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p> 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
-                                <p>iOS 是一个由苹果公司开发和发布的手机操作系统</p>
-
-                            </div>
-                        </div>
-
-                    </td>
-
-                </tr>
-            </table>*@
-
-
-
-        @*<div class="login" style="margin-top:0px;margin-right:20px;">
-
-            <div class="header">
-                <div class="switch" id="switch">
-                    <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7"style="font-size:25px;">畅销榜</a>
-                    <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8"style="font-size:25px;">新书榜</a><div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div>
-                </div>
-            </div>
-
-
-            <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">
-
-                <!--登录-->
-                <div class="web_login" id="web_login"> 
-                    <br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=""style="font-size:20px;">1\一本书</a><br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=""style="font-size:20px;">1\一本书</a><br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=""style="font-size:20px;">1\一本书</a><br /><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=""style="font-size:20px;">1\一本书</a><br /><br />
-                </div>
-                <!--登录end-->
-            </div>
-
-            <!--注册-->
-            <div class="qlogin" id="qlogin" style="display: none; ">
-                <div class="div-inline" id="fong">
-                    <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
-                    <label id="dont"><b>书名</b></label>
-                    <label style="font-size:20px;">作者</label>
-                    <label id="hh">简介：一本书的描述</label>
-                </div>
-            </div>
-            <!--注册end-->
-        </div>*@
-
-        <div id="myTab">
-            <ul class="nav nav-tabs">
-                <li><a href="#home" data-toggle="tab" style="font-size:25px;">畅销榜</a><>
-                <li><a href="#ios" data-toggle="tab" style="font-size:25px">新书榜</a><>
+        @*<table border="1"style="height:500px;width:350px;border-color:#000;" id="myTab" >
+            <tr style="height:500px;width:300px;">
+                <td style="height:500px;width:300px;">*@
+        <div  id="myTab">
+            <ul  class="nav nav-tabs">
+                <li><a href="#home" data-toggle="tab" style="font-size:25px;">畅销榜</a></li>
+                <li><a href="#ios" data-toggle="tab" style="font-size:25px">新书榜</a></li>
             </ul>
             <div id="myTabContent" class="tab-content">
                 <br />
@@ -269,10 +212,10 @@
                     <a href="" id="a">7.哪只眼睛看见你是我的弟</a><br /><br />
                     <a href="" id="a">8.时光单行道</a><br /><br />
                     <a href="" id="a">9.雕刻时光</a><br /><br />
-                    <a href="" id="a">10.春天得以安葬</a><br /><br />
-
-                </div>
-                <div class="tab-pane fade" id="ios">
+                   
+       
+                    </div>
+                    <div class="tab-pane fade" id="ios">
                     <a href="" id="a">1.半生荒唐，余生有你</a><br /><br />
                     <a href="" id="a">2.五大贼王</a><br /><br />
                     <a href="" id="a">3.小李飞刀</a><br /><br />
@@ -282,17 +225,50 @@
                     <a href="" id="a">7.沉睡的人鱼之家</a><br /><br />
                     <a href="" id="a">8.宝玉记</a><br /><br />
                     <a href="" id="a">9.夜伴三庚</a><br /><br />
-                    <a href="" id="a">10.欢乐颂</a><br /><br />
+               
+
                 </div>
             </div>
-        </div>
+         </div>
+            @*</td>
 
-
-
-    </div>
-
-
+                </tr>
+            </table>*@
+</div>
     <label id="dd">编辑推荐</label>
+ <div>
+     <hr/>
+     <div class="div-inline">
+         <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
+        <label id="dont"><b>书名</b></label>
+         <label style="font-size:20px;">作者</label>
+         <label id="hh">简介：一本书的描述</label>
+     </div>
+
+     <div class="div-inline" id="fong">
+         <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
+         <label id="dont"><b>书名</b></label>
+         <label style="font-size:20px;">作者</label>
+         <label id="hh">简介：一本书的描述</label>
+     </div>
+
+     <div class="div-inline" id="ong">
+         <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
+         <label id="dont"><b>书名</b></label>
+         <label style="font-size:20px;">作者</label>
+         <label id="hh">简介：一本书的描述</label>
+     </div>
+
+     <div class="div-inline" id="gont">
+         <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
+         <label id="dont"><b>书名</b></label>
+         <label style="font-size:20px;">作者</label>
+         <label id="hh">简介：一本书的描述</label>
+     </div>
+ </div>
+   
+   <br /><br />
+
     <div>
         <hr />
         <div class="div-inline">
@@ -323,39 +299,6 @@
             <label id="hh">简介：一本书的描述</label>
         </div>
     </div>
-
-    <br /><br />
-
-    <div>
-        <hr />
-        <div class="div-inline">
-            <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
-            <label id="dont"><b>书名</b></label>
-            <label style="font-size:20px;">作者</label>
-            <label id="hh">简介：一本书的描述</label>
-        </div>
-
-        <div class="div-inline" id="fong">
-            <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
-            <label id="dont"><b>书名</b></label>
-            <label style="font-size:20px;">作者</label>
-            <label id="hh">简介：一本书的描述</label>
-        </div>
-
-        <div class="div-inline" id="ong">
-            <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
-            <label id="dont"><b>书名</b></label>
-            <label style="font-size:20px;">作者</label>
-            <label id="hh">简介：一本书的描述</label>
-        </div>
-
-        <div class="div-inline" id="gont">
-            <img src="~/fonts/7.png">&nbsp;&nbsp;&nbsp;
-            <label id="dont"><b>书名</b></label>
-            <label style="font-size:20px;">作者</label>
-            <label id="hh">简介：一本书的描述</label>
-        </div>
-    </div>
-
+       
 </body>
 </html>
