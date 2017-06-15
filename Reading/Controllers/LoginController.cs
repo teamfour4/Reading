@@ -36,7 +36,7 @@ namespace Reading.Controllers
             }
             if (String.IsNullOrEmpty(returnUrl))
             {
-                return RedirectToAction("Index", "HomePage");
+                return RedirectToAction("HomePage", "HomePage");
             }
             else
             {
@@ -45,30 +45,14 @@ namespace Reading.Controllers
             //ModelState.AddModelError("", "您输入的账号密码错误");
 
         }
-        public ActionResult Register(FormCollection fc, User user)
-        {
-            var cnk_user = db.Users.FirstOrDefault(p => p.userId == user.userId);
-            if (cnk_user != null)
-            {
-                ModelState.AddModelError("userId", "该用户名已被注册！");
-                return View();
-            }
-            user.password = fc["password"].ToString().Trim();
-            if (ModelState.IsValid)
-            {
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("Login", "Login");
-            }
-            return View();
-        }
+       
         public bool ValidataUser(string UserId, string Password)
         {
             //根据传入的Email和password的值进行检索
             var users = db.Users.FirstOrDefault(u => u.userId == UserId && u.password == Password);
             if (users != null)
             {
-                Session["UserId"] = UserId;
+                Session["userId"] = UserId;
                 //Session["Role"] = member.roles.Name;
 
                 return true;
