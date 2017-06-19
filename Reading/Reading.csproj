@@ -46,12 +46,8 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>\\psf\Home\Desktop\Reading\Reading\Reading\bin\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Users\pangyuan\Desktop\tao\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\..\Users\pangyuan\Desktop\tao\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>\\psf\Home\Desktop\tao\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -185,8 +181,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Views\HomePage\HomePage.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Personal\Personal.cshtml" />
-    <Content Include="Views\Register\modUserPassword.cshtml" />
+    <Fakes Include="Fakes\Antlr3.Runtime.fakes" />
+    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <Fakes Include="Fakes\EntityFramework.SqlServer.fakes" />
+    <Content Include="Views\BookClassify\FantasyBook.cshtml" />
+    <Content Include="Views\BookClassify\EmpriseBook.cshtml" />
+    <Content Include="Views\BookClassify\MetropolisBook.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
