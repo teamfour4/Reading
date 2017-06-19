@@ -23,45 +23,49 @@ namespace Reading.Controllers
             if (cnk_user != null)
             {
                 ModelState.AddModelError("userId", "该用户名已被注册！");
+                Session["Register"] = "该用户名已被注册";
                 return View();
             }
             user.password = fc["password"].ToString().Trim();
-          if(ModelState .IsValid )
+            if (ModelState.IsValid)
             {
                 db.Users.Add(user);
                 db.SaveChanges();
-                return RedirectToAction("Login","Login");
+                return RedirectToAction("Login", "Login");
             }
             return View();
         }
         public ActionResult modUserPassword()
         {
-            if(Session ["userId"]==null)
+            if (Session["userId"] == null)
             {
-                return RedirectToAction("Login","Login");
+                return RedirectToAction("Login", "Login");
             }
             string userid = Session["userId"].ToString().Trim();
-            var user = db.Users.FirstOrDefault(m=>m.userId ==userid);
+            var user = db.Users.FirstOrDefault(m => m.userId == userid);
             return View(user);
         }
         [HttpPost]
-        public ActionResult modUserPassword(FormCollection fc,User user)
+        public ActionResult modUserPassword(FormCollection fc, User user)
         {
             user = db.Users.FirstOrDefault(m => m.userId == user.userId);
             string txtpwd = fc["txtpassword"].ToString().Trim();
             string txtpwd1 = fc["txtPassword1"].ToString().Trim();
             if (!txtpwd.Equals(user.password))
             {
-                Session["Execption"] = "输入的旧密码错误，请从新输入！";
+                Session["Password"] = "输入的旧密码错误，请从新输入！";
+
                 return RedirectToAction("modUserPassword", "Register");
             }
-
-            user .password = txtpwd1;
+            Response.Write(" <script>function window.onload() {alert( ' 弹出的消息' ); } </script> ");
+            Response.Write("<scripttype='text/javascript'>alert('你所查询的数据不存在！');</script>");
+            user.password = txtpwd1;
             //members.roles = members.roles;
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
+
             return RedirectToAction("HomePage", "HomePage");
 
         }
-        }
+    }
 }
