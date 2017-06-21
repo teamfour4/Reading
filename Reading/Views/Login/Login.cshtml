@@ -26,9 +26,11 @@
                     </span>
                     @Html.TextBoxFor(model => model.password, htmlAttributes: new { @class = "form-control", @type = "password" })
                 </div>
-                <br />
-                <a href="Register/Register">账号注册</a><a href="#"style="float:right">忘记密码</a>
+                
+                @*<br />*@
+                <a href="http://localhost:18914/Register/Register">账号注册</a><a style="color:red; float:right">@ViewBag.SessionName</a>@*<a href="#"style="float:right">忘记密码</a>*@
                 <center><button type="submit" class="btn btn-success btn-block" style="background-color:#d0d0d0;color:black;border:none">登录</button></center>
+               
                 <br />
                 <div style="text-align:center">
                 </div>

@@ -11,7 +11,7 @@
             width: 1000px;
             height: 40px;
         }
-                                                                                                               
+
         .a {
             color: #000000;
             font-weight: 500;
@@ -36,10 +36,18 @@
             <div>
 
                 <div>
-                   
-                        <a href="" style="float:left">将本站设为首页</a><a style="float:left">|</a><a href="" style="float:left">收藏本站</a><a style="float:right">|</a><a href="/Register/Register" style="float:right">注册</a><a style="float:right">|</a><a href="/Login/Login" style="float:right">登录</a><a style="float:right">|</a>a href="/Login/Login" style="float:right">登录</a>
 
-                    
+                    <a href="" style="float:left">将本站设为首页</a><a style="float:left">|</a><a href="" style="float:left">收藏本站</a>
+                    @{
+                        if (Session["IsLogin"] != null)
+                        {
+                            <a href="http://localhost:18914//Login//Logout" style="float:right">退出</a>                            <a style="float:right">|</a>      <a style="float:right"> @Session["UserId"] </a>
+                        }
+                        else
+                        {
+                            <a style="float:right"></a><a href="/Register/Register" style="float:right">注册</a><a style="float:right">|</a><a href="/Login/Login" style="float:right">登录</a>
+                        }
+                    }
                 </div> <hr />
                 <hr />
             </div>
@@ -49,23 +57,20 @@
                     <spans style="font-size:25px;"><b>多多阅读</b></spans> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                     <input class="well" type="text" style="border-radius:5px" placeholder="请输入要搜索的书籍" />
                     <input type="submit" style="border:none;border-radius:5px;height:40px;width:70px;background:#d0d0d0" />
-
-
-
                     <a style="float:right;font-size:23px;" href="/Personal/Personal">我的书架</a> <img style="float:right;" src="~/fonts/2.png" />
                 </div>
             </div>
 
             <div>
-                <div  style="height:50px;width:1158px;background: #d0d0d0; text-align:center;line-height:50px">
+                <div style="height:50px;width:1158px;background: #d0d0d0; text-align:center;line-height:50px">
 
                     <a href="/HomePage/HomePage" class="a">首页</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/BookClassify/FantasyBook" class="a">玄幻.奇幻</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/BookClassify/EmpriseBook" class="a">武侠.仙侠</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/BookClassify/MetropolisBook" class="a">都市.言情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/HistoryBook" class="a">历史.军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/GameBook" class="a">游戏.竞技</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/ScifiBook" class="a">科幻.灵异</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">历史.军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">游戏.竞技</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">科幻.灵异</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="/Personal/Personal" class="a">个人中心</a>
 
 

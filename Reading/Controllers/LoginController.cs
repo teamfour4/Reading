@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Reading.Controllers
 {
@@ -25,12 +26,16 @@ namespace Reading.Controllers
         public ActionResult login(string userId, string password, string returnUrl)
         {
 
-
+            Session["UserId"] = userId;
+            ViewBag.UserId = Session["UserId"];
 
             if (!ValidataUser(userId, password))
             {
+                ModelState.AddModelError("Nmae", "用户名或密码错误");
                 Session["Exception"] = "用户名或密码错误！";
-                return RedirectToAction("Login", "Login");
+                ViewBag.SessionName = Session["Exception"];
+                return View();
+                //return RedirectToAction("Login", "Login");
                 //FormsAuthentication.SetAuthCookie(Email ,false );
 
             }
@@ -52,13 +57,22 @@ namespace Reading.Controllers
             var users = db.Users.FirstOrDefault(u => u.userId == UserId && u.password == Password);
             if (users != null)
             {
-                Session["userId"] = UserId;
+                Session["IsLogin"] = UserId;
                 //Session["Role"] = member.roles.Name;
 
                 return true;
             }
 
             return false;
+        }
+        public ActionResult Logout()
+        {
+            //清除窗口验证的Cookies
+            FormsAuthentication.SignOut();
+            Session["IsLogin"] = null;
+            Session["userId"] = null;
+            //清除所有曾经写入过的Session信息
+            return RedirectToAction("HomePage", "HomePage");
         }
     }
 }
