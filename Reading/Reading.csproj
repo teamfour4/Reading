@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BookClassifyController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookInfoController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
@@ -194,6 +195,9 @@
     <Content Include="Views\BookClassify\FantasyBook.cshtml" />
     <Content Include="Views\BookClassify\EmpriseBook.cshtml" />
     <Content Include="Views\BookClassify\MetropolisBook.cshtml" />
+    <Content Include="Views\BookClassify\HistoryBook.cshtml" />
+    <Content Include="Views\BookClassify\GameBook.cshtml" />
+    <Content Include="Views\BookClassify\ScifiBook.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
