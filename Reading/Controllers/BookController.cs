@@ -15,5 +15,7 @@ namespace Reading.Controllers
         {
             return View(db.Books .ToList());
         }
+
+
     }
 }

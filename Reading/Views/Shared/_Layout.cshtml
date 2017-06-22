@@ -51,29 +51,50 @@
                 </div> <hr />
                 <hr />
             </div>
+
             <div>
                 <div>
                     <img src="~/fonts/1.png" height="40px" ;width="40px" />&nbsp;&nbsp;
                     <spans style="font-size:25px;"><b>多多阅读</b></spans> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    @*<center>
+                        @using (Html.BeginForm())
+                        {
+                            <p>
+                                <div class="form-group">
 
-                    <input class="well" type="text" style="border-radius:5px" placeholder="请输入要搜索的书籍" />
-                    <input type="submit" style="border:none;border-radius:5px;height:40px;width:70px;background:#d0d0d0" />
+                                    @Html.Label("", htmlAttributes: new { @class = "control-lable col-md-2 col-md-offset-5" })
+                                </div>
+                                <div class="col-md-3 ">
+                                    @Html.TextBox("SearchString", "", new { @class = "form-control " })  &nbsp;
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary ">
+                                        <a href="http://localhost:18914/BookInfo/Index">查询</a>
+                                    </button>
+
+                                </div>
+                            </p>
+                        }
+                    </center>*@
+                    @*<input class="well" type="text" style="border-radius:5px" placeholder="请输入要搜索的书籍" />
+                        <input type="submit" style="border:none;border-radius:5px;height:40px;width:70px;background:#d0d0d0" />*@
                     <a style="float:right;font-size:23px;" href="/Personal/Personal">我的书架</a> <img style="float:right;" src="~/fonts/2.png" />
                 </div>
             </div>
-
+          
+            <hr />
             <div>
                 <div style="height:50px;width:1158px;background: #d0d0d0; text-align:center;line-height:50px">
 
-                    <a href="/HomePage/HomePage" class="a">首页</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/FantasyBook" class="a">玄幻.奇幻</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/EmpriseBook" class="a">武侠.仙侠</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/BookClassify/MetropolisBook" class="a">都市.言情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="" class="a">历史.军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="" class="a">游戏.竞技</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="" class="a">科幻.灵异</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/Personal/Personal" class="a">个人中心</a>
-
+                    <a href="/HomePage/HomePage" class="a">首页</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/BookClassify/FantasyBook" class="a">玄幻.奇幻</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/BookClassify/EmpriseBook" class="a">武侠.仙侠</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/BookClassify/MetropolisBook" class="a">都市.言情</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">历史.军事</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">游戏.竞技</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="" class="a">科幻.灵异</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/Personal/Personal" class="a">个人中心</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="http://localhost:18914/BookInfo/Index" class="a">搜索</a>
 
                 </div>
             </div>
