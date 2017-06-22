@@ -26,13 +26,18 @@ namespace Reading.Controllers
 
         public ActionResult ReadBook(int?id)
         {
-            id = 1;//假设
+           /* id = 1;*///假设
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Chapter  c = db.Chapters.Find(id);
+            /* Chapter  c = db.Chapters.Find(id); *///select *from Chapters where Books_bookId=1 and chaptername=1
+            Chapter c = db.Chapters.Single(a => a.Books .bookId == id&&a.chapterName==1 );
+            //Chapter x=db.Chapters .Where (a => a.Books.bookId == id)
+            //c.Books.bookId =(int) id;
+            //int b = c.Books.bookId;//通过书的id来找章节
+            //db.Chapters.Find();
             if (c == null)
             {
                 return HttpNotFound();
