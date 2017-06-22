@@ -21,7 +21,8 @@ namespace Reading.Models
         public string introduction { get; set; }//简介
         [DisplayName("分类")]
         public string classify { get; set; }//分类
-
+        [DisplayName("图片")]
+        public string image { get; set; }
         public virtual ICollection<Chapter> Chapters { get; set; }
         public virtual ICollection<Bookshelves> Bookshelves { get; set; }
     }
