@@ -48,10 +48,10 @@
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\吴金桃\tao\EntityFramework.dll</HintPath>
+      <HintPath>..\..\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>\\psf\Home\Desktop\tao\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -151,6 +151,7 @@
     <Content Include="fonts\timg%284%29.png" />
     <Content Include="fonts\timg%286%29.png" />
     <Content Include="Global.asax" />
+    <Content Include="image\2020s.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
