@@ -24,9 +24,20 @@ namespace Reading.Controllers
 
         //}
 
-        public ActionResult ReadBook()
+        public ActionResult ReadBook(int?id)
         {
-            return View();
+            id = 1;//假设
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Chapter  c = db.Chapters.Find(id);
+            if (c == null)
+            {
+                return HttpNotFound();
+            }
+            return View(c);
         }
         // GET: Movies/Edit/5
         public ActionResult ShowBookInfo(int? id)

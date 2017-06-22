@@ -78,8 +78,11 @@
                     <br />
                     <br />
                     <form id="form3" name="form3" method="post" action="">
-                        <input type="button" class="btn btn-success" value="阅读" style="background-repeat:#808080;height:28px;width:50px;" onclick="window.open('/BookInfo/ReadBook')" />&nbsp;&nbsp;
-                        <button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p style="text-align:middle";>加入书架</p></button>
+                        <input type="button" class="btn btn-success" value="阅读"  onclick="window.open('/BookInfo/ReadBook')" />&nbsp;&nbsp;
+                        @*<div class="col-md-10" style="float:left;">
+                            <input id="sbm" type="submit" class="btn btn-info" value="关闭运动会" onclick="CompleteOrder()" />
+                        </div>*@
+                        <button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p >加入书架</p></button>
                     </form>
                 </li>
             </ul>
@@ -107,43 +110,5 @@
         </div>
     </div>
 
-    <div>
-        <h4>Movie</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.bookName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.bookName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.author)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.author)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.introduction)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.introduction)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.image)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.image)
-            </dd>
-
-        </dl>
-    </div>
 </body>
 </html>
