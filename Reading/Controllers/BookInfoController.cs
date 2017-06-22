@@ -43,12 +43,15 @@ namespace Reading.Controllers
         public ActionResult ShowBookInfo(int? id)
         {
             id = 1;//假设
+           
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
             Book book = db.Books.Find(id);
+            Session["bookName"] = book.bookName;
+            Session["author"] = book.author;
             if (book == null)
             {
                 return HttpNotFound();

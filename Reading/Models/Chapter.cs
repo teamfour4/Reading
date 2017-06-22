@@ -14,6 +14,8 @@ namespace Reading.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//自动增长
         [DisplayName("章节编号")]
         public int chapterId { get; set; }
+        [DisplayName("章节名字")] //第几章第几章
+        public int chapterName { get; set; }
         //[DisplayName("书的编号")]
         //public int bookId { get; set; }
         [DisplayName("章节标题")]

@@ -78,8 +78,9 @@
                     <br />
                     <br />
                     <form id="form3" name="form3" method="post" action="">
-                        <input type="button" class="btn btn-success" value="阅读"  onclick="window.open('/BookInfo/ReadBook')" />&nbsp;&nbsp;
-                        @Html.ActionLink("ReadBook", "ReadBook", new { id = Model.bookId })
+                        @*<input type="button" class="btn btn-success" value="阅读"  onclick="window.open('/BookInfo/ReadBook')" />*@
+                        @Html.ActionLink("阅读此书", "ReadBook", new { id = Model.bookId })&nbsp;&nbsp;
+                        @*@Html("ReadBook", "ReadBook", new { id = Model.bookId })*@
                         @*<div class="col-md-10" style="float:left;">
                             <input id="sbm" type="submit" class="btn btn-info" value="关闭运动会" onclick="CompleteOrder()" />
                         </div>*@
@@ -100,7 +101,6 @@
             <br />
             <br />
         </div>
-
         <div id="2" style="width:700px;height:900px">
             <p style="font-size:20px;">图书信息</p>
             <HR color=#987cb9 SIZE=0 />
