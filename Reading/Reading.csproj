@@ -151,6 +151,7 @@
     <Content Include="fonts\timg%284%29.png" />
     <Content Include="fonts\timg%286%29.png" />
     <Content Include="Global.asax" />
+    <Content Include="image\2020s.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

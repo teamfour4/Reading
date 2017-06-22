@@ -1,4 +1,5 @@
 ﻿@model Reading.Models.Book
+@*@model IEnumerable<Reading.Models.Book>*@
 @{
     ViewBag.Title = "ShowBookInfo";
 }
@@ -62,20 +63,26 @@
     <br />
     <div class="box" id="1">
         <div>
-            <div class="img">
-                <img src="http://www.wb18.net/files/article/image/2/2020/2020s.jpg" alt="巨星从业者" height="155" width="120" />
+            <div class="img"> 
+                <img src=@Html.DisplayFor(model => model.image) alt="巨星从业者"style="height:200px; width:170px;" />
             </div>
             <ul class="list">
                 <li></li>
                 <li></li>
-                <li><span>书名：</span>巨星从业者</li>
+                @*<li><span>书名：</span>巨星从业者</li>*@
+                <li> <span>书名：</span>
+                    @Html.DisplayFor(model => model.bookName)
+                </li>
                 <li>
-                    <span>作者:</span>君王带笑
+                    <span>作者：</span>@Html.DisplayFor(model => model.author)
                     <br />
                     <br />
                     <form id="form3" name="form3" method="post" action="">
-                        <input type="button"  class="btn btn-success"value="阅读"  style="background-repeat:#808080;height:28px;width:50px;"onclick="window.open('/BookInfo/ReadBook')" />&nbsp;&nbsp;
-                        <button type="submit" class="btn btn-success" style="background-repeat:#808080;height:28px;width:80px">加入书架</button>
+                        <input type="button" class="btn btn-success" value="阅读"  onclick="window.open('/BookInfo/ReadBook')" />&nbsp;&nbsp;
+                        @*<div class="col-md-10" style="float:left;">
+                            <input id="sbm" type="submit" class="btn btn-info" value="关闭运动会" onclick="CompleteOrder()" />
+                        </div>*@
+                        <button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p >加入书架</p></button>
                     </form>
                 </li>
             </ul>
@@ -93,13 +100,15 @@
             <br />
         </div>
 
-        <div id="2"style="width:900px;height:900px">
+        <div id="2" style="width:700px;height:900px">
             <p style="font-size:20px;">图书信息</p>
-            <HR  color=#987cb9 SIZE=0 />
-            <p>他是霍去病，是展昭，是唐钰小宝，是剑客，是时代小青年，是厂花，是冷血杀手，是温情大叔，是无畏战士，是仙帝，他他他……
-                    他不是变态，他也不是分裂，他只是一个演员！</p>
+            <HR color=#987cb9 SIZE=0 />
+            <p>
+                @Html.DisplayFor(model => model.introduction)
+            </p>
 
         </div>
     </div>
+
 </body>
 </html>
