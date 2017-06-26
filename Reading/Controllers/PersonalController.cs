@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reading.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Reading.Controllers
 {
     public class PersonalController : Controller
     {
+        private ReadingContext db = new ReadingContext();
         // GET: Personal
         public ActionResult Index()
         {
@@ -17,5 +19,9 @@ namespace Reading.Controllers
         {
             return View();
         }
+        //public ActionResult showCartInfo()
+        //{
+        //    return View(this.Carts);
+        //}
     }
 }

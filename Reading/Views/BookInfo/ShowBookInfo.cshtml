@@ -4,6 +4,28 @@
     ViewBag.Title = "ShowBookInfo";
 }
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<script>
+    function addSuccess() {
+        alert("添加书架成功！");
+    }
+
+    function addFailure(xhr) {
+        alert("添加书架失败(HTTP状态码：" + xhr.status + ")");
+    }
+
+</script>
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "addSuccess",
+        OnFailure = "addFailure",
+        HttpMethod = "Post"
+    };
+}
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,6 +77,9 @@
     </style>
 </head>
 
+
+
+
 <body>
     <br />
     <br />
@@ -68,7 +93,10 @@
             </div>
             <ul class="list">
                 <li></li>
-                <li></li>
+                <li>
+                    <span>类别：</span>
+                    @Html.DisplayFor(model=>model.classify)
+                </li>
                 @*<li><span>书名：</span>巨星从业者</li>*@
                 <li> <span>书名：</span>
                     @Html.DisplayFor(model => model.bookName)
@@ -84,7 +112,9 @@
                         @*<div class="col-md-10" style="float:left;">
                             <input id="sbm" type="submit" class="btn btn-info" value="关闭运动会" onclick="CompleteOrder()" />
                         </div>*@
-                        <button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p >加入书架</p></button>
+                        @Html.ActionLink("加入书架", "Personal", new { id = Model.bookId }, ajaxOption) 
+                        
+                        @*<button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p >加入书架</p></button>*@
                     </form>
                 </li>
             </ul>

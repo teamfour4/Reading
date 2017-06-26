@@ -15,7 +15,8 @@ namespace Reading.Controllers
         // GET: BookInfo
         public ActionResult Index()
         {
-            return View();
+            //return View();
+            return View(db.Bookshelves.ToList());
         }
 
         //public ActionResult ShowBookInfo()
@@ -74,5 +75,39 @@ namespace Reading.Controllers
         //    }
         //    return View(book);
         //}
+
+        public string Test(string classify, string bookName, string author)
+        {
+
+
+            string a = classify + " |" + bookName + " | " + author + "|";
+            return a;
+        }
+        public PartialViewResult ajaxPartialView(int? id)
+        {
+            Book bookid= db.Books.Find(id);
+            return PartialView(bookid);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Book bookid)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(bookid);
+                db.SaveChanges();
+                return Content("已经添加入购物车！");
+
+            }
+            return RedirectToAction("Personal", "Personal");
+           
+
+
+
+
+
+
+
+
     }
 }
