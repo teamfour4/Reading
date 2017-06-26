@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,17 +12,48 @@ namespace Reading.Controllers
     {
         private ReadingContext db = new ReadingContext();
         // GET: BookInfo
-      
 
-        public ActionResult ShowBookInfo()
+
+        public ActionResult ReadBook(int? id)
         {
-            return View();
+            /* id = 1;*///假设
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            /* Chapter  c = db.Chapters.Find(id); *///select *from Chapters where Books_bookId=1 and chaptername=1
+            Chapter c = db.Chapters.Single(a => a.Books.bookId == id && a.chapterName == 1);
+            //Chapter x=db.Chapters .Where (a => a.Books.bookId == id)
+            //c.Books.bookId =(int) id;
+            //int b = c.Books.bookId;//通过书的id来找章节
+            //db.Chapters.Find();
+            if (c == null)
+            {
+                return HttpNotFound();
+            }
+            return View(c);
+        }
+        // GET: Movies/Edit/5
+        public ActionResult ShowBookInfo(int? id)
+        {
+            id = 1;//假设
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Book book = db.Books.Find(id);
+            Session["bookName"] = book.bookName;
+            Session["author"] = book.author;
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
         }
 
-        public ActionResult ReadBook()
-        {
-            return View();
-        }
         public ActionResult Index(string SearchString)
         {
             //var a=Request.QueryString["SearchString"].ToString();
