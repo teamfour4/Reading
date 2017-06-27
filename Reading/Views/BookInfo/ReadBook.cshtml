@@ -6,100 +6,100 @@
     <script type="text/javascript" src="~/Content/jquery.cookie.js"></script>
     <script type="text/javascript" src="~/Content/jquery-1.9.0.min.js"></script>
     <script type="text/javascript">
-var options = {path: '/', expires: 10};			//定义路径，过期时间为10天
-var cookie_backColor = $.cookie("backColor");	//定义背景颜色值
-var cookie_fontColor = $.cookie("fontColor");	//定义字体颜色值
-var cookie_fontSize = $.cookie("fontSize");		//定义字体大小
+        var options = { path: '/', expires: 10 };			//定义路径，过期时间为10天
+        var cookie_backColor = $.cookie("backColor");	//定义背景颜色值
+        var cookie_fontColor = $.cookie("fontColor");	//定义字体颜色值
+        var cookie_fontSize = $.cookie("fontSize");		//定义字体大小
 
-//如果cookie里有背景颜色、字体颜色、字体大小，就加载相应属性。
-$(function(){
-	if(cookie_backColor){
-		$('body').css('background', cookie_backColor);
-	}
-	if(cookie_fontColor){
-		$('#content').css('color', cookie_fontColor);
-	}
-	if(cookie_fontSize){
-		$('#content').css('font-size', cookie_fontSize + 'px');
-	}
-});
+        //如果cookie里有背景颜色、字体颜色、字体大小，就加载相应属性。
+        $(function () {
+            if (cookie_backColor) {
+                $('body').css('background', cookie_backColor);
+            }
+            if (cookie_fontColor) {
+                $('#partContent').css('color', cookie_fontColor);
+            }
+            if (cookie_fontSize) {
+                $('#partContent').css('font-size', cookie_fontSize + 'px');
+            }
+        });
 
-//背景颜色方法
-function backcolor(num){
-	if(num == 1){
-		$("body").css('background','#E6FBEA');		//改变背景颜色
-		$.cookie("backColor", "#E6FBEA", options);	//把背景颜色值传进"backColor"这个cookie里
-	}
-	if(num == 2){
-		$("body").css('background','#D8ECED');
-		$.cookie("backColor", "#D8ECED", options);
-	}
-	if(num == 3){
-		$("body").css('background','#FDFCEA');
-		$.cookie("backColor", "#FDFCEA", options);
-	}
-	if(num == 4){
-		$("body").css('background','#EFEFEF');
-		$.cookie("backColor", "#EFEFEF", options);
-	}
-}
+        //背景颜色方法
+        function backcolor(num) {
+            if (num == 1) {
+                $("body").css('background', '#E6FBEA');		//改变背景颜色
+                $.cookie("backColor", "#E6FBEA", options);	//把背景颜色值传进"backColor"这个cookie里
+            }
+            if (num == 2) {
+                $("body").css('background', '#D8ECED');
+                $.cookie("backColor", "#D8ECED", options);
+            }
+            if (num == 3) {
+                $("body").css('background', '#FDFCEA');
+                $.cookie("backColor", "#FDFCEA", options);
+            }
+            if (num == 4) {
+                $("body").css('background', '#EFEFEF');
+                $.cookie("backColor", "#EFEFEF", options);
+            }
+        }
 
-//字体颜色方法
-function fontcolor(num){
-	if(num == 1){
-		$("#content").css('color','#f00');		//改变字体颜色
-		$.cookie("fontColor", "#f00", options);	//把字体颜色值传进"fontColor"这个cookie里
-	}
-	if(num == 2){
-		$("#content").css('color','#ff0');
-		$.cookie("fontColor", "#ff0", options);
-	}
-	if(num == 3){
-		$("#content").css('color','#00f');
-		$.cookie("fontColor", "#00f", options);
-	}
-	if(num == 4){
-		$("#content").css('color','#0f0');
-		$.cookie("fontColor", "#0f0", options);
-	}
-}
+        //字体颜色方法
+        function fontcolor(num) {
+            if (num == 1) {
+                $("#partContent").css('color', '#f00');		//改变字体颜色
+                $.cookie("fontColor", "#f00", options);	//把字体颜色值传进"fontColor"这个cookie里
+            }
+            if (num == 2) {
+                $("#partContent").css('color', '#ff0');
+                $.cookie("fontColor", "#ff0", options);
+            }
+            if (num == 3) {
+                $("#partContent").css('color', '#00f');
+                $.cookie("fontColor", "#00f", options);
+            }
+            if (num == 4) {
+                $("#partContent").css('color', '#0f0');
+                $.cookie("fontColor", "#0f0", options);
+            }
+        }
 
-//字体大小方法
-function fontsize(num){
-	switch(num){
-		case 1:
-			$("#content").css('font-size','12px');	//改变字体大小
-			$.cookie("fontSize", "12", options);	//把字体大小值传进"fontSize"这个cookie里
-			break;
-		case 2:
-			$("#content").css('font-size','14px');
-			$.cookie("fontSize", "14", options);
-			break;
-		case 3:
-			$("#content").css('font-size','16px');
-			$.cookie("fontSize", "16", options);
-			break;
-		case 4:
-			$("#content").css('font-size','18px');
-			$.cookie("fontSize", "18", options);
-			break;
-	}
-}
+        //字体大小方法
+        function fontsize(num) {
+            switch (num) {
+                case 1:
+                    $("#partContent").css('font-size', '12px');	//改变字体大小
+                    $.cookie("fontSize", "12", options);	//把字体大小值传进"fontSize"这个cookie里
+                    break;
+                case 2:
+                    $("#partContent").css('font-size', '14px');
+                    $.cookie("fontSize", "14", options);
+                    break;
+                case 3:
+                    $("#partContent").css('font-size', '16px');
+                    $.cookie("fontSize", "16", options);
+                    break;
+                case 4:
+                    $("#partContent").css('font-size', '18px');
+                    $.cookie("fontSize", "18", options);
+                    break;
+            }
+        }
 
-//恢复默认方法
-function defaultCL(){
-	$("body").css('background','');			//清空背景颜色
-	$.cookie("backColor", null, options);	//把背景颜色空值传进"backColor"这个cookie里
-	$("#content").css('color','');			//清空字体颜色
-	$.cookie("fontColor", null, options);	//把字体颜色空值传进"fontColor"这个cookie里
-	$("#content").css('font-size','');		//清空字体大小
-	$.cookie("fontSize", null, options);	//把字体大小空值传进"fontSize"这个cookie里
-}
+        //恢复默认方法
+        function defaultCL() {
+            $("body").css('background', '');			//清空背景颜色
+            $.cookie("backColor", null, options);	//把背景颜色空值传进"backColor"这个cookie里
+            $("#content").css('color', '');			//清空字体颜色
+            $.cookie("fontColor", null, options);	//把字体颜色空值传进"fontColor"这个cookie里
+            $("#content").css('font-size', '');		//清空字体大小
+            $.cookie("fontSize", null, options);	//把字体大小空值传进"fontSize"这个cookie里
+        }
     </script>
-    <link rel="stylesheet" href="~/Content/styles.css"/>
+    <link rel="stylesheet" href="~/Content/styles.css" />
 
     <!-- Font Awesome Stylesheet -->
-    <link rel="stylesheet" href="~/Content/font-awesome.css"/>
+    <link rel="stylesheet" href="~/Content/font-awesome.css" />
 
 
     <style>
@@ -182,11 +182,11 @@ function defaultCL(){
 
     <div class="widget rounded_rect vmiddle" id="wid" data-cid="w5075B7DB5F1496279815068" style="overflow:scroll; width:725px; height:810px;">
 
-        <div class="backcolor">   
+        <div class="fontSize">
             <nav id="colorNav">
                 <ul style="margin-right:-13px;">
                     <li class="blue">
-                        <a href="#" class="icon-twitter"style="height:2px;width:81px;"><b style="font-size:15px">背景颜色</b></a>
+                        <a href="#" class="icon-twitter" style="height:2px;width:81px;"><b style="font-size:15px">背景颜色</b></a>
                         <ul>
                             <li><a href="javascript:void(0);" onclick="backcolor(1)">青山不老</a></li>
                             <li><a href="javascript:void(0);" onclick="backcolor(2)">蓝色回忆</a></li>
@@ -199,6 +199,7 @@ function defaultCL(){
                             <li><a href="javascript:void(0);" onclick="fontsize(1)">12px</a></li>
                             <li><a href="javascript:void(0);" onclick="fontsize(2)">14px</a></li>
                             <li><a href="javascript:void(0);" onclick="fontsize(3)">16px</a></li>
+                            <li><a href="javascript:void(0);" onclick="fontsize(4)">18px</a></li>
                         </ul>
                     </li>
                     <li class="red">
@@ -216,7 +217,7 @@ function defaultCL(){
         </div>
         <div class="text" style="padding: 0px;"><p>&nbsp;</p></div>
 
-      
+
         <div class="main_" id="container">
             <div class="title_ c-3">
                 <h2 class="f-l">正文&nbsp;&nbsp;@Html.DisplayFor(model => model.title)</h2>
@@ -259,20 +260,25 @@ function defaultCL(){
             <div class="book-name_">
                 书名：
                 <a href="/book/488600/" target="_blank">
-                   @Session["bookName"] 
+                    @Session["bookName"]
                 </a>&nbsp;&nbsp;
                 作者：
                 <a href="/space/author/16569" target="_blank">
                     @Session["author"]
                 </a>&nbsp;&nbsp;
-                    <a class="disabled">上一章</a>
-                    <a href="/book/catalogue/488600">返回目录</a>
-                    <a href="/book/488600/44895273/">下一章</a>
-                </div>
-            </div>
-        </div>
+                <div class="article_ c-3" id="partContent">
+                    @*<pre style="font-size:15px" id="partContent">*@ @Html.DisplayFor(model => model.content) @*</pre>*@
+                    <hr />
 
-       
+                   
+                </div>
+                <a class="disabled">上一章</a>
+<a href="/book/catalogue/488600">返回目录</a>
+<a href="/book/488600/44895273/">下一章</a>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
