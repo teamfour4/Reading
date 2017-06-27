@@ -14,14 +14,19 @@ namespace Reading.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]//自动增长
         public int bookId { get; set; }//编号
         [DisplayName("书名")]
+
         public string bookName { get; set; }//书名
         [DisplayName("作者")]
+
         public string author { get; set; }//作者
         [DisplayName("简介")]
+
         public string introduction { get; set; }//简介
         [DisplayName("分类")]
+
         public string classify { get; set; }//分类
         [DisplayName("图片")]
+
         public string image { get; set; }
         public virtual ICollection<Chapter> Chapters { get; set; }
         public virtual ICollection<Bookshelves> Bookshelves { get; set; }
