@@ -86,5 +86,32 @@ namespace Reading.Controllers
             return View(books);
 
         }
+        public ActionResult Create(int? id)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Session["UserId"] == null)
+                {
+                    return RedirectToAction("Login", "Login");
+                }
+                //id = 1;
+                //ViewBag.UserId = 1;
+                Bookshelves bs = new Bookshelves();
+                Book b = db.Books.Find(1);
+                User u = db.Users.Find(Session["UserId"]);
+                //bs.Books.bookId = new int();
+                //bs.Books.bookId =1;
+                bs.Books = b;
+                bs.Users = u;
+                //bs.Users.userId = ViewBag.UserId;
+                db.Bookshelves.Add(bs);
+                db.SaveChanges();
+                return Content("已经添加入书架！");
+
+            }
+            return RedirectToAction("Personal", "Personal");
+
+
+        }
     }
 }
