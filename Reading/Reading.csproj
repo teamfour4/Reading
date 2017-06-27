@@ -204,6 +204,7 @@
     <Content Include="Views\BookClassify\GameBook.cshtml" />
     <Content Include="Views\BookClassify\HistoryBook.cshtml" />
     <Content Include="Views\BookClassify\ScifiBook.cshtml" />
+    <Content Include="Views\Personal\Personal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
