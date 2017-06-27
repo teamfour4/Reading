@@ -67,9 +67,9 @@
                 @Html.DisplayFor(modelItem => item.Rating)
             </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.bookId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.bookId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.bookId })
+                @Html.ActionLink("阅读书籍", "Edit", new { id = item.bookId }) |
+                @Html.ActionLink("加入书架", "Details", new { id = item.bookId }) |
+              
             </td>
         </tr>
     }
