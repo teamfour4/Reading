@@ -48,10 +48,10 @@
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\EntityFramework.dll</HintPath>
+      <HintPath>\\psf\Home\Documents\Tencent Files\1373633230\FileRecv\tao\tao\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\..\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>\\psf\Home\Documents\Tencent Files\1373633230\FileRecv\tao\tao\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -133,10 +133,13 @@
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
     <Content Include="Content\jquery-1.9.0.min.js" />
+    <Content Include="Content\jquery.cookie.js" />
     <Content Include="Content\login.js" />
     <Content Include="Content\login2.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="fonts\1.png" />
     <Content Include="fonts\2.png" />
     <Content Include="fonts\3.png" />
