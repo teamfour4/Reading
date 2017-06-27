@@ -106,7 +106,7 @@ namespace Reading.Controllers
                 //bs.Users.userId = ViewBag.UserId;
                 db.Bookshelves.Add(bs);
                 db.SaveChanges();
-                return Content("已经添加入书架！");
+                //return Content("已经添加入书架！");
 
             }
             return RedirectToAction("Personal", "Personal");
