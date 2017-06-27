@@ -69,11 +69,10 @@
         .list li span {
             font-weight: bold;
         }
-        #1 {
-            margin-right:100px;
-        }
-       
 
+        #1 {
+            margin-right: 100px;
+        }
     </style>
 </head>
 
@@ -88,34 +87,33 @@
     <br />
     <div class="box" id="1">
         <div>
-            <div class="img"> 
-                <img src=@Html.DisplayFor(model => model.image) alt="巨星从业者"style="height:200px; width:170px;" />
+            <div class="img">
+                <img src=@Html.DisplayFor(model => model.image) alt="巨星从业者" style="height:200px; width:170px;" />
             </div>
             <ul class="list">
                 <li></li>
                 <li>
                     <span>类别：</span>
-                    @Html.DisplayFor(model=>model.classify)
+                    @Html.DisplayFor(model => model.classify)
                 </li>
                 @*<li><span>书名：</span>巨星从业者</li>*@
-                <li> <span>书名：</span>
+                <li>
+                    <span>书名：</span>
                     @Html.DisplayFor(model => model.bookName)
                 </li>
                 <li>
                     <span>作者：</span>@Html.DisplayFor(model => model.author)
                     <br />
                     <br />
+                  
+
                     <form id="form3" name="form3" method="post" action="">
-                        @*<input type="button" class="btn btn-success" value="阅读"  onclick="window.open('/BookInfo/ReadBook')" />*@
+                    
                         @Html.ActionLink("阅读此书", "ReadBook", new { id = Model.bookId })&nbsp;&nbsp;
-                        @*@Html("ReadBook", "ReadBook", new { id = Model.bookId })*@
-                        @*<div class="col-md-10" style="float:left;">
-                            <input id="sbm" type="submit" class="btn btn-info" value="关闭运动会" onclick="CompleteOrder()" />
-                        </div>*@
-                        @Html.ActionLink("加入书架", "Personal", new { id = Model.bookId }, ajaxOption) 
-                        
-                        @*<button type="submit" class="btn btn-success" background-repeat:#808080;height:28px;width:80px"><p >加入书架</p></button>*@
+                      
+                       @Html.ActionLink("加入书架", "Create", new { id = Model.bookId })
                     </form>
+
                 </li>
             </ul>
             <br />
